@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translate border-left-width to borderLeftWidth</title>
+</head>
+<body>
+    <script>
+        // Changes dash-separated words like “my-short-string” into camel-cased “myShortString”.
+        // That is: removes all dashes, each word after dash becomes uppercased.
+        function camelize(str) {
+            return str
+                .split("-")
+                .map((item, index) => { if (index === 0) { return item } else { return item[0].toUpperCase() + item.slice(1) }})
+                .join("");
+        }
+        let testString = "the-cat-sat-on-the-mat";
+        console.log(camelize(testString));
+        let testString2 = "-next-time";
+        console.log(camelize(testString2));
+        let testString3 = "big-Time-Rush";
+        console.log(camelize(testString3));
+    
+    </script>
+</body>
+</html>
